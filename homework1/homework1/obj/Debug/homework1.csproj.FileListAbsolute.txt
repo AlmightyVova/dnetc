@@ -1,6 +1,0 @@
-E:\0points\repos\dotnet course\homework1\homework1\homework1\bin\Debug\homework1.exe
-E:\0points\repos\dotnet course\homework1\homework1\homework1\bin\Debug\homework1.pdb
-E:\0points\repos\dotnet course\homework1\homework1\homework1\obj\Debug\homework1.csprojAssemblyReference.cache
-E:\0points\repos\dotnet course\homework1\homework1\homework1\obj\Debug\homework1.csproj.CoreCompileInputs.cache
-E:\0points\repos\dotnet course\homework1\homework1\homework1\obj\Debug\homework1.exe
-E:\0points\repos\dotnet course\homework1\homework1\homework1\obj\Debug\homework1.pdb
