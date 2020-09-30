@@ -4,15 +4,15 @@ namespace homework1
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            task1();
-            task2();
-            task3();
-            task4();
+            Task1();
+            Task2();
+            Task3();
+            Task4();
         }
 
-        public static void task1()
+        public static void Task1()
         {
             int x = 10, y = 12, z = 3;
             x += y - x++ * z;
@@ -27,31 +27,48 @@ namespace homework1
             Console.WriteLine(x);
         }
 
-        public static void task2()
+        public static void Task2()
         {
-            const int x = 5, y = 6, z = 2;
-            const int sum = x + y + z;
-            const int average = sum / 3;
-            Console.WriteLine("task2 sum: "+sum);
-            Console.WriteLine("task2 average: "+average);
+            #region Cut average
+
+            {
+                const int x = 5, y = 6, z = 2;
+                const int sum = x + y + z;
+                const int average = sum / 3;
+                Console.WriteLine($"task2 sum: {sum}");
+                Console.WriteLine($"task2 cut average: {average}");
+            }
+
+            #endregion
+
+            #region Real average
+
+            {
+                const int x = 5, y = 6, z = 2;
+                const int sum = x + y + z;
+                const double average = (double) sum / 3;
+                Console.WriteLine($"task2 sum: {sum}");
+                Console.WriteLine($"task2 real average: {average}");
+            }
+
+            #endregion
         }
 
-        public static void task3()
+        public static void Task3()
         {
             const double pi = 3.14;
-            double r = 17;
-            double S = pi * Math.Pow(r, 2);
-            Console.WriteLine("task3: r = {0}, S = {1}",r,S);
+            double radius = 17;
+            double square = pi * Math.Pow(radius, 2);
+            Console.WriteLine($"task3: r = {radius}, S = {square}");
         }
 
-        public static void task4()
+        public static void Task4()
         {
             const double pi = 3.14;
-            double R = 3, h = 7;
-            double V, S;
-            V = pi * Math.Pow(R, 2) * h;
-            S = 2 * pi * R*(R + h);
-            Console.WriteLine("task4: R = {0}, h = {1}, V = {2}, S = {3}",R,h,V,S);
+            double radius = 3, height = 7;
+            double volume = pi * Math.Pow(radius, 2) * height,
+                square = 2 * pi * radius * (radius + height);
+            Console.WriteLine($"task4: R = {radius}, h = {height}, V = {volume}, S = {square}");
         }
     }
 }
