@@ -1,0 +1,6 @@
+E:\0points\repos\dotnet course\hw2\hw2\bin\Debug\hw2.exe
+E:\0points\repos\dotnet course\hw2\hw2\bin\Debug\hw2.pdb
+E:\0points\repos\dotnet course\hw2\hw2\obj\Debug\hw2.csprojAssemblyReference.cache
+E:\0points\repos\dotnet course\hw2\hw2\obj\Debug\hw2.csproj.CoreCompileInputs.cache
+E:\0points\repos\dotnet course\hw2\hw2\obj\Debug\hw2.exe
+E:\0points\repos\dotnet course\hw2\hw2\obj\Debug\hw2.pdb
