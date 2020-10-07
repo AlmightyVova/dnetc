@@ -10,6 +10,7 @@ namespace add1
 
         public static void Main(string[] args)
         {
+            SetSizes();
             SquareBuild(width, height, offset);
             ActionSelector();
         }
@@ -68,6 +69,12 @@ namespace add1
             {
                 offset[i] = 0;
             }
+        }
+
+        private static void SetSizes()
+        {
+            width = Convert.ToInt32(Console.ReadLine());
+            height = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
