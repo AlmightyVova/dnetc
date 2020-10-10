@@ -5,26 +5,47 @@ namespace add1
 {
     internal class Program
     {
-        static int width = 3, height = 5;
-        static private int[] offset = {0, 0};
+        private const int MaxSize = 10;
 
-        public static void Main(string[] args)
+        public static void Main()
         {
-            SetSizes();
-            SquareBuild(width, height, offset);
-            ActionSelector();
+            int width, height;
+            int offsetX = 0, offsetY = 0;
+            SetSizes(out width, out height);
+            BuildSquare(width, height);
+            RedrawSquare(width, height, offsetX, offsetY);
+            UserControls(width, height, offsetX, offsetY);
         }
 
-        private static void SquareBuild(int width, int height, int[] offset)
+        private static void TempUse()
         {
-            string line = "".PadLeft(offset[0]) + String.Concat(Enumerable.Repeat("*", width));
-            string fillLines = String.Concat(Enumerable.Repeat("\n", offset[1]));
-            string str = fillLines+String.Concat(Enumerable.Repeat(line + "\n", height));
+            Console.CursorTop = 5;
+            Console.WriteLine("Writing line");
+        }
+
+        private static void BuildSquare(int width, int height)
+        {
+            /*
+             * Old drawing method:
+            string line = "".PadLeft(offsetX) + String.Concat(Enumerable.Repeat("*", width));
+            string fillLines = String.Concat(Enumerable.Repeat("\n", offsetY));
+            string str = fillLines + String.Concat(Enumerable.Repeat(line + "\n", height));
+            */
+            string line = String.Concat(Enumerable.Repeat("*", width));
+            string str = String.Concat(Enumerable.Repeat(line + "\n", height));
             Console.Clear();
             Console.WriteLine(str);
         }
 
-        public static void ActionSelector()
+        private static void RedrawSquare(int width, int height, int offsetX, int offsetY)
+        {
+            Console.SetCursorPosition(1, 1);
+            Console.Write(String.Concat(Enumerable.Repeat("-",2)));
+            Console.SetCursorPosition(1, 1);
+            Console.Write(String.Concat(Enumerable.Repeat("+\n".PadLeft(2),2)));
+        }
+
+        public static void UserControls(int width, int height, int offsetX, int offsetY)
         {
             ConsoleKey key;
             do
@@ -34,23 +55,23 @@ namespace add1
                 {
                     case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
-                        ChangeOffset(1,-1);
-                        SquareBuild(width, height, offset);
+                        ChangeOffset(ref offsetY, -1);
+                        BuildSquare(width, height);
                         break;
                     case ConsoleKey.A:
-                        case ConsoleKey.LeftArrow:
-                        ChangeOffset(0,-1);
-                        SquareBuild(width,height,offset);
+                    case ConsoleKey.LeftArrow:
+                        ChangeOffset(ref offsetX, -1);
+                        BuildSquare(width, height);
                         break;
                     case ConsoleKey.S:
                     case ConsoleKey.DownArrow:
-                        ChangeOffset(1,1);
-                        SquareBuild(width,height,offset);
+                        ChangeOffset(ref offsetY, 1);
+                        BuildSquare(width, height);
                         break;
                     case ConsoleKey.D:
                     case ConsoleKey.RightArrow:
-                        ChangeOffset(0,+1);
-                        SquareBuild(width,height,offset);
+                        ChangeOffset(ref offsetX, +1);
+                        BuildSquare(width, height);
                         break;
                     default:
                         Console.WriteLine($"Wrong key entered: {key}");
@@ -59,22 +80,25 @@ namespace add1
             } while (key != ConsoleKey.Escape);
         }
 
-        private static void ChangeOffset(int i, int change)
+        private static void ChangeOffset(ref int offset, int change)
         {
-            if (offset[i] + change >= 0)
+            if (offset + change >= 0)
             {
-                offset[i] += change;
+                offset += change;
             }
             else
             {
-                offset[i] = 0;
+                offset = 0;
             }
         }
 
-        private static void SetSizes()
+        private static void SetSizes(out int width, out int height)
         {
             width = Convert.ToInt32(Console.ReadLine());
             height = Convert.ToInt32(Console.ReadLine());
+
+            if (width > MaxSize) width = MaxSize;
+            if (height > MaxSize) height = MaxSize;
         }
     }
 }
