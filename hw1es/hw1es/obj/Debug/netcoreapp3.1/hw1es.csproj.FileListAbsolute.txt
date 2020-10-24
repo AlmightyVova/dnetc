@@ -1,0 +1,13 @@
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.exe
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.deps.json
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.runtimeconfig.json
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.runtimeconfig.dev.json
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.dll
+E:\0points\repos\dotnet course\hw1es\hw1es\bin\Debug\netcoreapp3.1\hw1es.pdb
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.csprojAssemblyReference.cache
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.AssemblyInfoInputs.cache
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.AssemblyInfo.cs
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.csproj.CoreCompileInputs.cache
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.dll
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.pdb
+E:\0points\repos\dotnet course\hw1es\hw1es\obj\Debug\netcoreapp3.1\hw1es.genruntimeconfig.cache
